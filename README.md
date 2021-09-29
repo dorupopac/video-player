@@ -1,0 +1,1 @@
+https://doru-videoplayer.netlify.app
