@@ -77,13 +77,14 @@ const changeVolume = e => {
   videoPlayer.volumeBar.style.width = `${volume * 100}%`;
   videoPlayer.video.volume = volume;
   // Change icon depending on volume
-  if (volume > 0.7)
+  if (volume > 0.7) {
     videoPlayer.volumeIcon.classList.replace(volumeIconState, 'fa-volume-up');
+  }
   else if (volume < 0.7 && volume > 0)
-    videoPlayer.volumeIcon.classList.replace(volumeIconState, 'fa-volume-down');
+  videoPlayer.volumeIcon.classList.replace(volumeIconState, 'fa-volume-down');
   else if (volume === 0)
-    videoPlayer.volumeIcon.classList.replace(volumeIconState, 'fa-volume-off');
-
+  videoPlayer.volumeIcon.classList.replace(volumeIconState, 'fa-volume-off');
+  
   volumeIconState = videoPlayer.volumeIcon.classList[1];
 };
 
@@ -97,6 +98,7 @@ const muteVideoSound = () => {
   } else {
     videoPlayer.video.muted = true;
     videoPlayer.volumeIcon.classList.replace(volumeIconState, 'fa-volume-mute');
+    volumeIconState = videoPlayer.volumeIcon.classList[1];
     videoPlayer.volumeIcon.setAttribute('title', 'Unmute');
     videoPlayer.volumeBar.style.width = 0;
   }
