@@ -147,7 +147,7 @@ video {
 
 .volume-bar {
   background: var(--font-color);
-  width: 100%;
+  width: 50%;
   height: 100%;
   border-radius: 10px;
   transition: width 0.2s ease-in;
@@ -156,6 +156,7 @@ video {
 .volume-bar:hover {
   background: var(--primary-color);
 }
+
 
 /* Right Controls ---------------------------- */
 .controls-right {
